@@ -1,0 +1,2 @@
+defmodule BambooSMTPSandbox do
+end
