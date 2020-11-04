@@ -13,12 +13,12 @@ defmodule BambooSMTPSandbox.MixProject do
 
   def application do
     [
-      extra_applications: [:logger],
+      extra_applications: [:logger, :bamboo, :bamboo_smtp],
       mod: {BambooSMTPSandbox.Application, []}
     ]
   end
 
   defp deps do
-    []
+    [{:bamboo_smtp, "~> 3.0"}]
   end
 end
