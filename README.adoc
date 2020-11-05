@@ -1,0 +1,81 @@
+= BambooSMTP Sandbox
+
+image:https://github.com/fewlinesco/bamboo_smtp-playground/workflows/Continuous%20Integration/badge.svg?branch=master&event=push[Continuous Integration]
+
+== Description
+
+This project aims to be a sandbox for developers testing https://github.com/fewlinesco/bamboo_smtp[BambooSMTP].
+
+== Installation
+
+Once you cloned this project, heads up to `mix.exs` to set the desired version of BambooSMTP.
+
+[source, elixir]
+----
+# By default, we target the current release.
+defp deps do
+  [{:bamboo_smtp, "~> 3.0"}]
+end
+
+# You might want to make it target a local version on your computer.
+defp deps do
+  [{:bamboo_smtp, path: "../path/to/bamboo_smtp"}]
+end
+----
+
+You will need to set some values as environment variables.
+
+[source, bash]
+----
+# Create a new file for env vars (based on our sample).
+cp .env_vars.sample .env_vars
+----
+
+Then, set the following values in `.env_vars`:
+
+- `EMAIL_TO`: The email address you want to send an email.
+- `EMAIL_FROM`: The email address that will send the email.
+
+You'll find the SMTP options below those values.
+
+=== Help! I know nothing about SMTP server configuration! 😱
+
+If you owns a Google account (and so a Gmail address), you can use Google's SMTP server.
+
+Set the following values:
+
+- `SMTP_SERVER`: 'smtp.gmail.com'
+- `SMTP_HOSTNAME`: '[YOU CAN PUT ANYTHING HERE]'
+- `SMTP_PORT`: '465'
+- `SMTP_USERNAME`: '[YOUR GMAIL ADDRESS]'
+- `SMTP_PASSWORD`: '[YOUR GMAIL PASSWORD]'
+
+⚠️ Don't forget two things:
+
+- You should allow IMAP transfert in your account settings.
+
+- If you have 2FA activated on your Google account:
+  - You should manually create an application password.
+  - You should use this password as `SMTP_PASSWORD`.
+
+== Usage
+
+The application is intended to be used through `iex`.
+
+[source, bash]
+----
+iex -S mix
+----
+
+Once inside `iex`, you will have access to some functions such as:
+
+[source, elixir]
+----
+# Send a basic email with some default values as subject and text body.
+BambooSMTPSandbox.Sender.send_email()
+
+# Send a basic email like above but with some attachments.
+BambooSMTPSandbox.Sender.send_email_with_attachments()
+----
+
+I wish you a good testing. 😌
