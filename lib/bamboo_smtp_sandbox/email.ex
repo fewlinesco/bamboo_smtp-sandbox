@@ -45,7 +45,7 @@ defmodule BambooSMTPSandbox.Email do
     # Same as sample_email_with_attachments()
     sample_email_with_attachments("BambooSMTP Sandbox", "Hello 👋")
   """
-  @spec sample_email(String.t(), String.t()) :: Bamboo.Email.t()
+  @spec sample_email_with_attachments(String.t(), String.t()) :: Bamboo.Email.t()
   def sample_email_with_attachments(subject \\ "BambooSMTP Sandbox", text_body \\ "Hello 👋") do
     sample_email = sample_email(subject, text_body)
     attachments = Path.wildcard("priv/attachments/*.*")
