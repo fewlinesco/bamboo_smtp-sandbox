@@ -9,10 +9,10 @@ defmodule BambooSMTPSandbox.EmailTest do
 
     assert bamboo_email.__struct__ == Bamboo.Email
 
-    refute is_nil(bamboo_email.to)
-    refute is_nil(bamboo_email.from)
-    refute is_nil(bamboo_email.subject)
-    refute is_nil(bamboo_email.text_body)
+    refute bamboo_email.to == ""
+    refute bamboo_email.from == ""
+    refute bamboo_email.subject == ""
+    refute bamboo_email.text_body == ""
   end
 
   test "
@@ -27,8 +27,8 @@ defmodule BambooSMTPSandbox.EmailTest do
     assert bamboo_email.subject == "Sandbox - Test"
     assert bamboo_email.text_body == "This is a test"
 
-    refute is_nil(bamboo_email.to)
-    refute is_nil(bamboo_email.from)
+    refute bamboo_email.to == ""
+    refute bamboo_email.from == ""
   end
 
   test "
@@ -42,10 +42,10 @@ defmodule BambooSMTPSandbox.EmailTest do
 
     refute length(bamboo_email.attachments) == 0
 
-    refute is_nil(bamboo_email.to)
-    refute is_nil(bamboo_email.from)
-    refute is_nil(bamboo_email.subject)
-    refute is_nil(bamboo_email.text_body)
+    refute bamboo_email.to == ""
+    refute bamboo_email.from == ""
+    refute bamboo_email.subject == ""
+    refute bamboo_email.text_body == ""
   end
 
   test "
@@ -64,7 +64,7 @@ defmodule BambooSMTPSandbox.EmailTest do
     assert bamboo_email.subject == "Sandbox - Test"
     assert bamboo_email.text_body == "This is a test"
 
-    refute is_nil(bamboo_email.to)
-    refute is_nil(bamboo_email.from)
+    refute bamboo_email.to == ""
+    refute bamboo_email.from == ""
   end
 end
