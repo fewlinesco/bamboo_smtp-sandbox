@@ -17,7 +17,7 @@ defp deps do
   [{:bamboo_smtp, "~> 3.0"}]
 end
 
-# You might want to make it target a local version on your computer.
+# You might want to target a local version on your computer.
 defp deps do
   [{:bamboo_smtp, path: "../path/to/bamboo_smtp"}]
 end
@@ -36,7 +36,7 @@ Then, set the following values in `.env_vars`:
 - `EMAIL_TO`: The email address you want to send an email.
 - `EMAIL_FROM`: The email address that will send the email.
 
-You'll find the SMTP options below those values.
+You will find the SMTP configuration options below those values.
 
 === Help! I know nothing about SMTP server configuration! 😱
 
@@ -50,13 +50,10 @@ Set the following values:
 - `SMTP_USERNAME`: '[YOUR GMAIL ADDRESS]'
 - `SMTP_PASSWORD`: '[YOUR GMAIL PASSWORD]'
 
-⚠️ Don't forget two things:
+⚠️ **Don't forget two things**:
 
-- You should allow IMAP transfert in your account settings.
-
-- If you have 2FA activated on your Google account:
-  - You should manually create an application password.
-  - You should use this password as `SMTP_PASSWORD`.
+- You should allow https://support.google.com/mail/answer/7126229?hl=en[IMAP transfert in your account settings].
+- If you have https://en.wikipedia.org/wiki/Multi-factor_authentication[2FA] activated on your Google account: you should manually https://support.google.com/accounts/answer/185833?hl=en[create an application password] and use it as `SMTP_PASSWORD`.
 
 == Usage
 
