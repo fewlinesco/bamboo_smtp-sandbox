@@ -1,5 +1,7 @@
 # BambooSMTP Sandbox
 
+![Continuous Integration](https://github.com/fewlinesco/bamboo_smtp-playground/workflows/Continuous%20Integration/badge.svg?branch=master&event=push)
+
 **TODO: Add description**
 
 ## Installation
