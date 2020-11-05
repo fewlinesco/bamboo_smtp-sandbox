@@ -1,4 +1,3 @@
 _build/
 deps/
 .env_vars
-priv/attachments/*.jpg
