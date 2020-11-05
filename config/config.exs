@@ -13,3 +13,8 @@ config :bamboo_smtp_sandbox, BambooSMTPSandbox.Mailer,
   retries: 1,
   no_mx_lookups: false,
   auth: :always
+
+if Mix.env() == :test do
+  config :logger, level: :warning
+  config :bamboo_smtp_sandbox, BambooSMTPSandbox.Mailer, adapter: Bamboo.TestAdapter
+end
