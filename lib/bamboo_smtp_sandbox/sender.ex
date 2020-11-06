@@ -1,8 +1,8 @@
 defmodule BambooSMTPSandbox.Sender do
   @moduledoc """
-  Functions for delivering emails using BambooSMTP and based and our Email factory.
+  Functions for delivering emails using BambooSMTP and based on our Email factory.
 
-  In development environment, the log_level should be set to `:debug`, allowing
+  In development environment, the log level should be set to `:debug`, allowing
   you to see the content of the email you try to send.
 
   Feel free to tweaks this module by adding new function(s) reproducing the issue(s)
