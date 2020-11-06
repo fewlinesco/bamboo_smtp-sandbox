@@ -2,8 +2,8 @@ defmodule BambooSMTPSandbox.Email do
   @moduledoc """
   Contains functions for creating email structures using Bamboo.
 
-  This module can be treated as a Factory module. Each time we want to build a
-  new email structure that slightly differed from the existing one, we should
+  This module can be considered as a Factory module. Each time we want to build a
+  new email structure that slightly differed from the existing ones, we should
   add a new function here.
   """
   import Bamboo.Email
