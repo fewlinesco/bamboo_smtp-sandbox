@@ -14,7 +14,7 @@ Once you cloned this project, heads up to `mix.exs` to set the desired version o
 ----
 # By default, we target the current release.
 defp deps do
-  [{:bamboo_smtp, "~> 3.1.1"}]
+  [{:bamboo_smtp, "~> 4.0.1"}]
 end
 
 # You might want to target a local version on your computer.
