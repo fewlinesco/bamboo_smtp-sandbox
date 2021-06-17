@@ -19,6 +19,6 @@ defmodule BambooSMTPSandbox.MixProject do
   end
 
   defp deps do
-    [{:bamboo_smtp, "~> 3.1.1"}]
+    [{:bamboo_smtp, "~> 4.0.1"}]
   end
 end
